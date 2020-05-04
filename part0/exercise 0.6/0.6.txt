@@ -1,0 +1,18 @@
+title 0.6 new note SPA
+
+note:
+sends the note as a JSON-data cantaing an object with the
+content and date properties.
+
+The request has application/json in the header. 
+So that the server knows how to process the request
+end note.
+
+browser --> sever: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server --> browser : status code 201 "Created" 
+
+note:
+server respones with a status code of 201 (created).
+The browser does not send anymore HTTP requests and the .
+note end:
+

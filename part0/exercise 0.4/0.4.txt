@@ -1,0 +1,38 @@
+title 0.4 new note
+
+note:
+The following happens on submit: 
+end node.
+
+browser-->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+note:
+server response with 302, asking the browser to do URL redirect
+asking the browser to send a new GET request.
+end note.
+
+browser -->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server -->browser: HTML-content.
+
+note:
+The following GET requests and responses 
+are the cause of the links imbeded in the
+HTML-file
+end note:
+
+browser --> server:HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server --> browser: main.css.
+
+browser --> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server --> browser: main.js
+
+note:
+browser starts processing the code to fetch JSON-data
+end note.
+
+browser --> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server --> browser: Array of objects containing the notes.
+
+note:
+browser executes the callback to load the notes on to the display
+end note:
