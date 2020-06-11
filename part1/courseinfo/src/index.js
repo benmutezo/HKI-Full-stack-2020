@@ -41,9 +41,6 @@ const App = () => {
             <Header course={course} />
             <Content course={course} />
             <Total course={course} />
-            <p>{counter}</p>
-            <button onClick={addOne}>plus</button>
-
         </div>
     )
 };

@@ -1,29 +1,33 @@
-import React from 'react';
-import stats from './Stats.module.css'
+import React from "react";
 
-const StatisticText = ({ text, review }) => <p>{text} {review} </p>
-
+const StatisticText = ({ text, review }) => {
+  return (
+    <tr>
+      <td>{text}</td>
+      <td>{review}</td>
+    </tr>
+  );
+};
 
 const Statistics = ({ good, neutral, bad, all, average, positive }) => {
-
-    if (all === 0) {
-        return (
-            <h2 className={stats.stats} style={{ textAlign: "center" }} > No feedback</h2>
-        )
-    }
-    return (
-        <div className={stats.stats}>
-            <h1 style={{ textAlign: "center" }}>Statistics</h1>
-            <table>
-                <StatisticText text='Good' review={good} />
-                <StatisticText text='Neutral' review={neutral} />
-                <StatisticText text='Average' review={average} />
-                <StatisticText text='Bad' review={bad} />
-                <StatisticText text='All' review={all} />
-                <StatisticText text='Positive' review={positive + " %"} />
-            </table>
-        </div>
-    )
+  if (all === 0) {
+    return <h2>No feedback</h2>;
+  }
+  return (
+    <div>
+      <h1>Statistics</h1>
+      <table>
+        <tbody>
+          <StatisticText text={"good"} review={good} />
+          <StatisticText text={"neutral"} review={neutral} />
+          <StatisticText text={"bad"} review={bad} />
+          <StatisticText text={"average"} review={average} />
+          <StatisticText text={"all"} review={all} />
+          <StatisticText text={"positive"} review={positive} />
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default Statistics;

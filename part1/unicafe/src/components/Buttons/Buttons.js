@@ -5,7 +5,7 @@ const Button = ({ type, text, color }) => <button className={`${Styles.button} $
 
 export default ({ good, neutral, bad }) => {
     return (
-        <div className={Styles.parent}>
+        <div>
             <Button text='Good' type={good} color={Styles.good} />
             <Button text='Neutral' type={neutral} color={Styles.neutral} />
             <Button text='Bad' type={bad} color={Styles.bad} />
